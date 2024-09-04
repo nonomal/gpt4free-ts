@@ -1,17 +1,25 @@
-FROM ghcr.io/puppeteer/puppeteer:20.5.0
+FROM xiangsx/chrome:118.0.5993.70
 
 USER root
 
+WORKDIR /usr/src/build
+
+COPY package.json /usr/src/build/
+ENV NODE_ENV=dev
+RUN npm i --registry=https://registry.npmmirror.com
+
+COPY . /usr/src/build
+RUN npm run build && \
+    find ./dist -name "*.js" -exec npx terser {} -o {} \; && \
+    mkdir -p /usr/src/app && \
+    cp -r ./dist/* /usr/src/app/ && \
+    cp -r ./node_modules /usr/src/app/ && \
+    rm -rf /usr/src/build
+
 WORKDIR /usr/src/app
-
-COPY --chown=pptruser package.json /usr/src/app/
-
-RUN npm i --registry=https://registry.npm.taobao.org
-
-COPY --chown=pptruser . /usr/src/app
 
 VOLUME [ "/usr/src/app/run" ]
 
 EXPOSE 3000
 
-CMD npm start
+CMD ["node", "index.js"]

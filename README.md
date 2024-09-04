@@ -8,6 +8,16 @@ English | [中文](README_zh.md) | [日本語](README_ja.md)
 <p>You can join our discord: <a href="https://discord.gg/cYUU8mCDMd">discord.gg/gptgod<a> for further updates. <a href="https://discord.gg/cYUU8mCDMd"><img align="center" alt="gpt4free Discord" width="22px" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/discord.svg" /></a></p>
 </div>
 
+## 🆓 Free OpenAI Key
+
+WebSite: [https://gptgod.online](https://gptgod.online)
+
+Api Base URL: `https://api.gptgod.online`
+
+Api Key: `sk-OsMMq65tXdfOIlTUYtocSL7NCsmA7CerN77OkEv29dODg1EA`
+
+Support Models: `gpt-4-all`,`gpt-3.5-turbo`,`gpt-3.5-turbo-16k`,`net-gpt-3.5-turbo`,`net-gpt-3.5-turbo-16k`,`claude-1-100k`,`google-palm`,`llama-2-70b`,`llama-2-13b`,`llama-2-7b`,`code-llama-34b`,`code-llama-13b`,`code-llama-7b`,`qwen-72b`,`stable-diffusion`,`mixtral-8x7b`,`mistral-medium`
+
 ## 🚩 Reverse target
 
 I suggest you fork this project first. Some websites may go offline at any time.
@@ -15,22 +25,48 @@ I suggest you fork this project first. Some websites may go offline at any time.
 Still striving to keep updating.
 
 Have implemented models here:
-If you do not want your website to appear here, please raise an issue and I will remove it immediately.
-|model|support|status|active time|
-|--|--|--|--|
-|[vita]()|👍gpt3.5|![Active](https://img.shields.io/badge/Active-brightgreen)|after 2023-06-17|
-|[chatdemo]()|👍gpt3.5|![Active](https://img.shields.io/badge/Active-brightgreen)|after 2023-06-17|
-|[you.com](https://you.com)|👍GPT-3.5|![Active](https://img.shields.io/badge/Active-brightgreen)|after 2023-06-17
-|[phind.com](https://www.phind.com/)|Gpt3.5/ Internet / good search|![Active](https://img.shields.io/badge/Active-brightgreen)|after 2023-06-17
-|[forefront.ai](https://chat.forefront.ai)|GPT-4/gpt3.5|![Active](https://img.shields.io/badge/Active-lightgrey)||
-|[bing.com/chat](https://bing.com/chat)|GPT-4/3.5||
-|[poe.com](https://poe.com)| GPT-4/3.5||
-|[writesonic.com](https://writesonic.com)| GPT-3.5 / Internet||
-|[t3nsor.com](https://t3nsor.com)|GPT-3.5||
+If you do not want your website to appear here, please raise an issue and I will remove it immediately. Unfortunately, most of the sites here are no longer available.
+
+***Update At 2023-09-10***
+
+| Site     | Models                                            |
+|----------|---------------------------------------------------|
+| you      | gpt-3.5-turbo                                     |
+| phind    | net-gpt-3.5-turbo                                 |
+| forefront| gpt-3.5-turbo, claude                             |
+| mcbbs    | gpt-3.5-turbo, gpt-3.5-turbo-16k                  |
+| chatdemo | gpt-3.5-turbo, gpt-3.5-turbo-16k                  |
+| vita     | gpt-3.5-turbo                                     |
+| skailar  | gpt-4                                             |
+| fakeopen | gpt-3.5-turbo, gpt-3.5-turbo-16k, gpt-4           |
+| easychat | gpt-4                                             |
+| better   | gpt-3.5-turbo, gpt-3.5-turbo-16k, gpt-4           |
+| pweb     | gpt-3.5-turbo, gpt-3.5-turbo-16k                  |
+| bai      | gpt-3.5-turbo                                     |
+| gra      | gpt-3.5-turbo, gpt-3.5-turbo-16k                  |
+| magic    | gpt-3.5-turbo, gpt-4, claude-instance, claude, claude-100k  |
+| chim     | gpt-3.5-turbo, gpt-3.5-turbo-16k, gpt-4           |
+| ram      | gpt-3.5-turbo-16k                                 |
+| chur     | gpt-3.5-turbo, gpt-3.5-turbo-16k                  |
+| xun      | gpt-3.5-turbo, gpt-3.5-turbo-16k                  |
+| vvm      | gpt-3.5-turbo, gpt-3.5-turbo-16k, gpt-4           |
+| poef     |                                                   |
+| claude   | claude-2-100k                                     |
+| cursor   | gpt-3.5-turbo, gpt-4                              |
+| chatbase | gpt-3.5-turbo                                     |
+| ails     | gpt-3.5-turbo                                     |
+| sincode  | gpt-3.5-turbo, gpt-4                              |
+| openai   | too much                              |
+| jasper   | gpt-3.5-turbo, gpt-4                              |
+| pap      |                                                   |
+| acytoo   | gpt-3.5-turbo                                     |
+| google   | search                                            |
+| www      | url                                               |
+| ddg      | search                                            |
 
 ## 🏃‍♂️ Run
 
-First of all, you should create file `.env`. 
+First of all, you should create file `.env`.
 > ***All operation methods require this step.***
 
 ```env
@@ -39,22 +75,22 @@ rapid_api_key=xxxxxxxxxx
 EMAIL_TYPE=temp-email44
 DEBUG=0
 POOL_SIZE=0
-PHIND_POOL_SIZE=1
+PHIND_POOL_SIZE=0
 ```
 
 - `http_proxy`: config your proxy if you can not access target website directly; If you dont need proxy, delete this line;
-- `forefront` use env(this site has been removed): 
-  - `rapid_api_key`: you should config this if you use forefront api, this apikey is used for receive register email, get api key here
-  - `EMAIL_TYPE`: temp email type includes `temp-email` `temp-email44` `tempmail-lol`
-      - [temp-email](https://rapidapi.com/Privatix/api/temp-mail): soft limit 100req/days, if over use money, need bind credit card! Very Stable!
-      - [temp-email44](https://rapidapi.com/calvinloveland335703-0p6BxLYIH8f/api/temp-mail44): hard limit 100req/days! Stable!
-      - [tempmail-lol](): nothing need, limit 25request/5min. Not Stable.
-  - `DEBUG`: Valid when use `forefront` You can set =1 when you run local. show reverse process
-  - `POOL_SIZE`: `forefront` concurrency size. Keep set=1 until you run it successfully!!! You can engage in {POOL_SIZE} conversations concurrently. More pool size, More conversation can be done simultaneously, But use more RAM
+- `forefront` use env(this site has been removed):
+    - `rapid_api_key`: you should config this if you use forefront api, this apikey is used for receive register email, get api key here
+    - `EMAIL_TYPE`: temp email type includes `temp-email` `temp-email44` `tempmail-lol`
+        - [temp-email](https://rapidapi.com/Privatix/api/temp-mail): soft limit 100req/days, if over use money, need bind credit card! Very Stable!
+        - [temp-email44](https://rapidapi.com/calvinloveland335703-0p6BxLYIH8f/api/temp-mail44): hard limit 100req/days! Stable!
+        - [tempmail-lol](): nothing need, limit 25request/5min. Not Stable.
+    - `DEBUG`: Valid when use `forefront` You can set =1 when you run local. show reverse process
+    - `POOL_SIZE`: `forefront` concurrency size. Keep set=1 until you run it successfully!!! You can engage in {POOL_SIZE} conversations concurrently. More pool size, More conversation can be done simultaneously, But use more RAM
 - `phind` use env:
-  - `PHIND_POOL_SIZE`: `phind` concurrency size.You can engage in {POOL_SIZE} conversations concurrently. More pool size, More conversation can be done simultaneously, But use more RAM
+    - `PHIND_POOL_SIZE`: `phind` concurrency size.You can engage in {POOL_SIZE} conversations concurrently. More pool size, More conversation can be done simultaneously, But use more RAM
 
-### Run local 🖥️ 
+### Run local 🖥️
 
 ```shell
 # install module
@@ -63,13 +99,13 @@ yarn
 yarn start
 ```
 
-### Run with docker(Suggest!) 🐳 
+### Run with docker(Suggest!) 🐳
 
 ```
 docker run -p 3000:3000 --env-file .env xiangsx/gpt4free-ts:latest
 ```
 
-### Deploy with docker-compose 🎭 
+### Deploy with docker-compose 🎭
 
 first, you should create file .env; Follow step "Run with docker
 
@@ -79,26 +115,45 @@ deploy
 docker-compose up --build -d
 ```
 
+### Clash+one-api+gpt4free-ts Start with one command 😮
+
+[gpt4free-ts-deploy](https://github.com/xiangsx/gpt4free-ts-deploy)
+
 ## 🚀 Let's Use GPT4
 
-> Return when chat complete http://127.0.0.1:3000/ask?prompt=***&model=***&site=***
+> Find supports model and site http://127.0.0.1:3000/supports [GET]
 
-> Return with eventstream http://127.0.0.1:3000/ask/stream?prompt=***&model=***&site=***
+> The same as openai http://127.0.0.1:3000/:site/v1/chat/completions [POST]
+
+> The same as openai http://127.0.0.1:3000/v1/chat/completions?site=xxx [POST]
+
+> Return when chat complete http://127.0.0.1:3000/ask?prompt=***&model=***&site=*** [POST/GET]
+
+> Return with eventstream http://127.0.0.1:3000/ask/stream?prompt=***&model=***&site=*** [POST/GET]
 
 ### Request Params 📝
 
 - `prompt`: your question. It can be a `string` or `jsonstr`.
-  - example `jsonstr`:`[{"role":"user","content":"hello\n"},{"role":"assistant","content":"Hi there! How can I assist you today?"},{"role":"user","content":"who are you"}]`
-  - example `string`: `who are you`
-- `model`: default `gpt3.5-turbo`. model include:`gpt4` `gpt3.5-turbo` `net-gpt3.5-turbo`
-- `site`: default `you`. target site, include `forefront` `you` `chatdemo` `phind` `vita`
+    - example `jsonstr`:`[{"role":"user","content":"hello\n"},{"role":"assistant","content":"Hi there! How can I assist you today?"},{"role":"user","content":"who are you"}]`
+    - example `string`: `who are you`
+- `model`: default `gpt3.5-turbo`. model include:`gpt4` `gpt3.5-turbo` `net-gpt3.5-turbo` `gpt-3.5-turbo-16k`
+- `site`: default `you`. target site, include `fakeopen` `better` `forefront` `you` `chatdemo` `phind` `vita`
 
 ### Site Support Model 🧩
 
-- `forefront` :`gpt4`
-- `you`: `gpt3.5-turbo`
-- `chatdemo`: `gpt3.5-turbo`
-- `phind`: `net-gpt3.5-turbo`
+query supports site and models with api `127.0.0.1:3000/supports`
+
+```json
+[
+  {
+    "site": "you",
+    "models": [
+      "gpt-3.5-turbo"
+    ]
+  },
+  ...
+]
+```
 
 ### Response Params 🔙
 
@@ -169,10 +224,9 @@ event: done
 data: {"content":"done"}
 ```
 
-## 👥 Wechat Group
+## 👥 Chat Group
 
-<image src="https://github.com/xiangsx/gpt4free-ts/assets/29322721/b07fff99-f501-41ed-b857-7049c4572e47" width=240 />
-<image src="https://github.com/xiangsx/gpt4free-ts/assets/29322721/0b605d4d-f189-457c-b2eb-94a12ad69fd8" width=240 />
+<image src="https://github.com/xiangsx/gpt4free-ts/assets/29322721/311ba62d-e611-4aed-98f6-b34cf115866a" width=240 />
 
 ## 🌟 Star History
 
